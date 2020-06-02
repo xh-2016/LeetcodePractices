@@ -92,7 +92,7 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         int n = 10;
-        //System.out.println(solution.waysToChange(n));
+        //System.out.println(Solution.waysToChange(n));
         System.out.println(solution.waysToChangeBetter(n));
     }
 
