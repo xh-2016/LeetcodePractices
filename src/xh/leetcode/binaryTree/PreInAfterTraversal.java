@@ -161,7 +161,7 @@ public class PreInAfterTraversal {
         three.right = five;
 
         List<Integer> res = new ArrayList<>();
-        //res = solution.preorderTraversal(one);
+        //res = Solution.preorderTraversal(one);
         res = solution.preorderTraversalByIte(one);
         res = solution.inOrderTraversal(one);
         res = solution.afterTraversal(one);
