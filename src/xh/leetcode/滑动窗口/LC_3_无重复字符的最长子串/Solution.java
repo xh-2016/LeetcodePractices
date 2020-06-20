@@ -1,7 +1,8 @@
 package xh.leetcode.滑动窗口.LC_3_无重复字符的最长子串;
 
-import java.util.HashMap;
-import java.util.Map;
+import jdk.nashorn.internal.ir.WhileNode;
+
+import java.util.*;
 
 /**
  * @Author XH
@@ -67,10 +68,51 @@ public class Solution {
         return res;
     }
 
+
+    /** 解法二：用一个队列，把元素不停的加入到队列中，如果有相同的元素，就把队首的元素移除，这样我们就可以保证队列中永远都没有重复的元素*/
+    public int lengthOfLongestSubstring1(String s) {
+        int res  = 0;
+        /** 用一个队列，把元素不停的加入到队列中，如果有相同的元素，就把队首的元素移除，这样我们就可以保证队列中永远都没有重复的元素 ,链表;先进先出 */
+        Queue<Character> charQueue = new LinkedList<>();
+        for (char c : s.toCharArray()) {
+            /** queue中包含当前字符，队首出队 */
+            while (charQueue.contains(c)) {
+                charQueue.poll();
+            }
+            /** 不包含，加入队尾 */
+            charQueue.add(c);
+           // ((LinkedList<Character>) charQueue).addLast(c);
+            res = Math.max(res, charQueue.size());
+        }
+        return res;
+    }
+
+    /** 滑动窗口：Set记录不重复的最大子串的所有字符 */
+    public int lengthOfLongestSubstring2(String s) {
+        int res  = 0;
+        int right = 0;
+        int left = 0;
+        /** 用一个队列，把元素不停的加入到队列中，如果有相同的元素，就把队首的元素移除，这样我们就可以保证队列中永远都没有重复的元素 ,链表;先进先出 */
+        Set<Character> set = new HashSet<>();
+        while(right < s.length()) {
+            if(set.contains(s.charAt(right))) {
+                set.remove(s.charAt(left));
+                left++;
+            }else {
+                set.add(s.charAt(right));
+                /** 求最大子串长度，所有在每次加入元素到set时计算 */
+                res = Math.max(res, set.size());
+                right++;
+            }
+        }
+        return res;
+    }
+
+
     public static void main(String[] args) {
         Solution solution = new Solution();
         String s = "pwwkew";
-        System.out.println(solution.lengthOfLongestSubstring(s));
+        System.out.println(solution.lengthOfLongestSubstring2(s));
     }
 
 }

@@ -37,10 +37,9 @@ public class Solution {
         Map<Character,Integer> window = new HashMap<>(16);
         /** 匹配上的字符个数 */
         int match = 0;
-        /** 结果字符串的开始索引 */
-        int start = 0;
         /** 结果字符串的最小长度 */
         int minLength = Integer.MAX_VALUE;
+        String res = "";
 
         /** 遍历目标字符串t，初始化needs */
         for (char c : t.toCharArray()) {
@@ -63,7 +62,7 @@ public class Solution {
                 /** 更新最小字符串 */
                 if(minLength > (right - left)) {
                     minLength = right - left;
-                    start = left;
+                    res = s.substring(left, right);
                 }
                 /** 判断needs中是否包含left移动前的元素，包含则需要移除,并判断needs和window此时的match数 */
                 char c2 = s.charAt(left);
@@ -78,14 +77,15 @@ public class Solution {
             }
         }
 
+        return res;
         /** substring左闭右开 */
-        return minLength == Integer.MAX_VALUE ? "" : s.substring(start, start + minLength);
+       //return minLength == Integer.MAX_VALUE ? "" : s.substring(start, start + minLength);
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String s = "AA";
-        String t = "AA";
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
         System.out.println(solution.minWindow(s,t));
     }
 
