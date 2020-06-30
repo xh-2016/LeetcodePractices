@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Author XH
- * @Description TODO 双指针 从数组末尾开始比较
+ * @Description TODO 双指针 从数组末尾开始比较 easy
  * 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
  *
  * 说明:
