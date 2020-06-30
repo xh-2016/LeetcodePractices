@@ -246,7 +246,7 @@ public class KSum {
     public int fourSumCount(int[] A,int[] B,int[] C,int[] D){
         int res = 0;
         int N = A.length;
-        //将A、B数组包含的两数之和保存在map中并记录次数，key为sun，value为count，作为查找表
+        //将A、B数组包含的两数之和保存在map中并记录次数，key为sum，value为count，作为查找表
         Map<Integer,Integer> AB_map = new HashMap<>();
         for(int i = 0;i < N;i++){
             for(int j = 0;j < N;j++){

@@ -46,7 +46,7 @@ public class KMP {
     /**
      * 给定字符数组sm，找出每个字符对应的最长前缀串==后缀串的长度。
      * eg:ababa,sm[4]=a,next[4]=2，即其最大匹配串为ab
-     * 难点【递归】：已知next[0,……,i-1],求next[i]；next[0]=-1,next[1==0;
+     * 难点【递归】：已知next[0,……,i-1],求next[i]；next[0]=-1,next[1]=0;
      * 注意:next[i]=sm[0……i-1]中最大前缀串和后缀串，前缀串不包括sm[i-1]，后缀串不包括sm[0]
      * @param sm
      * @return
