@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 /**
  * @Author XH
  * @Description TODO 回溯法 + 交换 medium
+ * https://leetcode.wang/leetCode-46-Permutations.html
  * 给定一个 没有重复 数字的序列，返回其所有可能的全排列。
  * 示例:
  * 输入: [1,2,3]
@@ -44,7 +45,9 @@ public class Solution1 {
             for(int i = start; i < nums.length; i++) {
                 /** 交换位置 */
                 swap(nums, i, start);
-                /** 递归 */
+                /** 递归,注意这里是 start+1，即start之前的元素保持不变
+                 * 排列，改变了元素间相对位置，start可以往前回溯，则递归时，start = start + 1
+                 * */
                 permute_helper(nums, start + 1);
                 /** 撤销交换 */
                 swap(nums, i, start);
