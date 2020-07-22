@@ -1,8 +1,8 @@
-package 二分查找.LC_852_山脉数组的峰顶索引;
+package xh.leetcode.二分查找.LC_852_山脉数组的峰顶索引;
 
 /**
  * @Author XH
- * @Description TODO 二分查找 easy
+ * @Description TODO xh.leetcode.二分查找 easy
  * 我们把符合下列属性的数组 A 称作山脉：
  * A.length >= 3
  * 存在 0 < i < A.length - 1 使得A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1]

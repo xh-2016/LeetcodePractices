@@ -1,4 +1,4 @@
-package 二分查找.LC_153_寻找旋转排序数组中的最小值;
+package xh.leetcode.二分查找.LC_153_寻找旋转排序数组中的最小值;
 
 /**
  * @Author XH

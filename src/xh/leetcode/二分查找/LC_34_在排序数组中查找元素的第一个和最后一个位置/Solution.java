@@ -1,12 +1,10 @@
-package 二分查找.LC_34_在排序数组中查找元素的第一个和最后一个位置;
-
-import org.w3c.dom.ls.LSException;
+package xh.leetcode.二分查找.LC_34_在排序数组中查找元素的第一个和最后一个位置;
 
 import java.util.Arrays;
 
 /**
  * @Author XH
- * @Description TODO 二分查找 middle
+ * @Description TODO xh.leetcode.二分查找 middle
  * 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
  * 你的算法时间复杂度必须是 O(log n) 级别。
  * 如果数组中不存在目标值，返回 [-1, -1]。
@@ -20,7 +18,7 @@ import java.util.Arrays;
  * <p>
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array
- * TODO 二分查找 左闭右闭 固定的模板
+ * TODO xh.leetcode.二分查找 左闭右闭 固定的模板
  * @Date 2020/6/7 15:49
  */
 public class Solution {

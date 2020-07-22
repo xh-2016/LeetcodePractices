@@ -1,8 +1,8 @@
-package 二分查找.LC_162_寻找峰值;
+package xh.leetcode.二分查找.LC_162_寻找峰值;
 
 /**
  * @Author XH
- * @Description TODO 二分查找 medium
+ * @Description TODO xh.leetcode.二分查找 medium
  * 峰值元素是指其值大于左右相邻值的元素。
  * 给定一个输入数组 nums，其中 nums[i] ≠ nums[i+1]，找到峰值元素并返回其索引。
  * 数组可能包含多个峰值，在这种情况下，返回任何一个峰值所在位置即可。

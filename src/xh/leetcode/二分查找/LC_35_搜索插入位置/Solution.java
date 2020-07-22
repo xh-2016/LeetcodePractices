@@ -1,4 +1,4 @@
-package 二分查找.LC_35_搜索插入位置;
+package xh.leetcode.二分查找.LC_35_搜索插入位置;
 
 /**
  * @Author XH
